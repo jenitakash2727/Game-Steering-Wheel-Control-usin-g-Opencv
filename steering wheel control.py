@@ -19,22 +19,11 @@ while True:
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     value = (11, 11)
     blurred = cv2.GaussianBlur(hsv, value, 0)
-    # colourLower = np.array([53, 55, 209])
-    # colourUpper = np.array([180, 255, 255])
-    colourLower = np.array([0, 100, 100])  # Lower HSV boundary for red
-    colourUpper = np.array([10, 255, 255])  # Upper HSV boundary for red
+  
+    colourLower = np.array([0, 100, 100]) 
+    colourUpper = np.array([10, 255, 255])  
 
-    # colourLower = np.array([110, 150, 150])  # Royal blue lower boundary
-    # colourUpper = np.array([130, 255, 255])  # Royal blue upper boundary
-
-    # colourLower = np.array([112, 170, 90])  # example from tuner
-    # colourUpper = np.array([128, 255, 255])aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-
-    # colourLower = np.array([160, 100, 150])  # Rose lower bound
-    # colourUpper = np.array([170, 255, 255])  # Rose upper bound
-    #
-    # colourLower = np.array([150, 100, 150])
-    # colourUpper = np.array([170, 255, 255])
+   
 
     height = img.shape[0]
     width = img.shape[1]
@@ -93,3 +82,4 @@ while True:
         break
 
 cv2.destroyAllWindows()
+
